@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ed Sheeran - Albuns</title>	
+	<meta charset="utf-8">
+	<!-- Reset de CSS -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<!-- CSS de ícones do Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+		<!-- CSS comum de todo o site -->
+	<link rel="stylesheet" type="text/css" href="css/styleMain.css">
+	<!-- CSS específico dessa página -->
+	<link rel="stylesheet" type="text/css" href="css/albuns.css">
+	<!-- Ícone da Página -->
+	<link rel="shortcut icon" href="imgs/paw.ico" />
+</head>
+<body>	
+	<nav id="menuPrincipal">
+		<h1><a href="index.html">Ed Sheeran</a></h1>
+		<ul>
+			<li><a href="albuns.html">Álbuns</a></li>
+			<li><a href="historia.html">História</a></li>
+			<li><a href="videos.html">Vídeos</a></li>
+		</ul>
+	</nav>
+
+	<main id="principal" class="parallaxImage" style="background-image: url('imgs/albuns-ed.jpg')">
+		<nav id="menuAlbuns">
+			<input type="radio" name="radioAlbum" id="radioPlus">
+			<label for="radioPlus" target="_blank" class="btnAlbuns btnAlbunsPlus" onclick="mudarAlbum('plus')"></label>
+			<input type="radio" name="radioAlbum" id="radioMultiply">
+			<label for="radioMultiply" target="_blank" class="btnAlbuns btnAlbunsMultiply" onclick="mudarAlbum('multiply')"></label>
+			<input type="radio" name="radioAlbum" id="radioDivide" checked>
+			<label for="radioDivide" target="_blank" class="btnAlbuns btnAlbunsDivide" onclick="mudarAlbum('divide')"></label>
+		</nav>
+		<h1 id="tituloPlayer">Divide</h1>
+		<section id="lyricsContainer" style="display: none">...</section>
+		<section id="playerContainer">
+			<div id="player">
+				<button onclick="lyricsPlayPause()">Modo Karaokê *</button>
+				<div id="imagemPlayer">
+					<img id="comandosPlayer" src="imgs/icones-player.png" usemap="playerComandosMap">
+					<map name="playerComandosMap">
+						<area target="_blank" class="playerCircle" shape="circle" onclick=" playerPlayPause()">
+						<area target="_blank" class="playerCircle" shape="circle" onclick="playerNextPrevious(1)">
+						<area target="_blank" class="playerCircle" shape="circle" onclick="playerNextPrevious(-1)">
+					</map>
+				</div>
+				<button onclick="altMenuMusicas()">Alternar Menu de Músicas</button>				
+			</div>
+			<div id="listaMusicasTexto">
+				<div target="_blank" class="listaMusicas">
+					<p target="_blank" class="tituloMusica" onclick="playMusic(0)">1. Eraser</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(1)">2. Castle On The Hill</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(2)">3. Dive</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(3)">4. Shape Of You</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(4)">5. Perfect</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(5)">6. Galway Girl</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(6)">7. Happier</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(7)">8. Hearts Dont Break Around Here</p>
+				</div>
+				<div target="_blank" class="listaMusicas">
+					<p target="_blank" class="tituloMusica" onclick="playMusic(8)">9. New Man</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(9)">10. What Do I Know</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(10)">11. How Would You Feel (Paean)</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(11)">12. Supermarket Flowers</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(12)">13. Barcelona</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(13)">14. Bibia Be Ye Ye</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(14)">15. Nancy Mulligan</p><br>
+					<p target="_blank" class="tituloMusica" onclick="playMusic(15)">16. Save Myself</p>
+				</div>
+				<button onclick="playMusic()">Aleatório</button>
+			</div>
+			<div id="listaMusicasImagem" style="display: none;">
+				<img id="imagemMusicas" src="imgs/musicas-divide.png" usemap="divideMap">
+				<map name="plusMap">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(0)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(1)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(2)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(3)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(4)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(5)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(6)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(7)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(8)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(9)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(10)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(11)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(12)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(13)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(14)">
+					<area target="_blank" class= "plusRect" shape="poly" onclick="playMusic(15)">
+				</map>
+				<map name="multiplyMap">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(0)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(1)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(2)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(3)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(4)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(5)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(6)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(7)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(8)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(9)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(10)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(11)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(12)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(13)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(14)">
+					<area target="_blank" class= "multiplyRect" shape="poly" onclick="playMusic(15)">
+				</map>
+				<map name="divideMap">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(0)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(1)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(2)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(3)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(4)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(5)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(6)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(7)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(8)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(9)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(10)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(11)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(12)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(13)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(14)">
+					<area target="_blank" class= "divideRect" shape="poly" onclick="playMusic(15)">
+				</map>
+			</div>
+			<h3 style="color: white; font-size: 1em; font-weight: bold; letter-spacing: .15em; margin-right: 7%;">* Nem todas as músicas possuem modo karaokê<h3>
+		</section>
+		<section id="historyContainer" class="sectionText">
+			<h2>História do Álbum</h2>
+			<article id="plusHistory" style="display: none">
+				<p><span>Ed Sheeran</span> acabou por assinar um contrato com a gravadora <span>Atlantic Records</span> e com a <span>Rocket</span>, empresa de gestão artística de <span>Elton John</span>. Ele comentou: “Ele [John] entrou e disse: 'Cadê o Ed Sheeran?' Eu fiquei tipo: 'Caralho! Porra, ele sabe meu nome!'. É surreal, eu cresci ouvindo seu trabalho e agora é ele que me elogia, me ajuda com minha carreira e está realmente interessado em mim e minha música. Grande parte das canções foi gravada em um <span>velho computador</span>. De acordo com o produtor, <span>não foi necessário um grande uso de Auto-Tune</span>, embora ele tenha usado um pouco de Melodyne para "ajudar nos vocais de apoio e a manter o tom correto". No começo de cada sessão, <span>Jake</span> dizia para Ed para ele <span>começar a falar de seu dia ou assuntos da sua vida</span>, e então nascia a ideia para uma música. Gosling afirmou que "era quase como ser um psiquiatra. Eu dizia: <span>'Me conte seus problemas, Ed. O que está acontecendo na sua vida?'</span>". Ele disse ainda que o trabalho vocal do cantor fora incrivelmente rápido. Todo o processo de desenvolvimento foi completado em <span>março de 2011</span>.</p>
+			</article>
+			<article id="multiplyHistory" style="display: none">
+				<p>Em um <span>vídeo de bastidores de turnê</span>, foi revelado que <span>Sheeran</span> estava trabalhando com os produtores <span>Rick Rubin</span> e <span>Pharrell Williams</span>, no qual mais tarde confirmou que estava contribuindo para o álbum. <span>O álbum foi previsto para</span> lançamento em <span>17 de fevereiro de 2014</span>, mas Sheeran teve "<span>a oportunidade de trabalhar com Rick Rubin</span>, durante dois meses, o que [ele] não ia dizer não para", o que levou a um atraso. <span>Tendo escrito "centenas" de músicas</span>, Sheeran entrou no estúdio com Rubin e eles <span>selecionaram algumas</span>, até as <span>15 novas canções que apresentam no álbum</span>, excluindo <span>"I See Fire"</span>, que foi gravada separadamente e lançada para a trilha sonora de <span>The Hobbit: The Desolation of Smaug</span>. Sheeran afirmou que ele "começou a fazer um novo disco acústico, que se transformou em um registro de neo-soul-funk", devido à influência de trabalhar com produtores como <span>Rubin</span> e <span>Benny Blanco</span> que "<span>puxou [ele] de [sua] zona de conforto</span>." <span>Jake Gosling</span>, que <span>co-escreveu</span> e <span>produziu</span> a maioria do álbum de estreia de Sheeran, não tem créditos de escrita deste álbum, enquanto os novos colaboradores incluem <span>Gary Lightbody</span> do <span>Snow Patrol</span> e o ato de música dance britânico <span>Rudimental</span>.</p>
+			</article>
+			<article id="divideHistory" style="display: flex">
+				<p>Em <span>13 de dezembro de 2015</span>, <span>Sheeran</span> anunciou através de suas <span>redes sociais</span> que estava impondo a si mesmo um <span>hiato</span> delas, comentando que estava <span>"a ver o mundo por uma tela e não por meus próprios olhos"</span>. Além disso, o cantor confirmou que gastaria seu tempo no estúdio a compor seu <span>terceiro álbum</span>. Nessa altura, com <span>metade do disco completa</span>, ele afirmava ser <span>"a melhor coisa que já fiz desde sempre"</span>. Exatamente <span>um ano após seu anúncio</span>, o inglês atualizou todos os seus perfis com <span>uma imagem somente em azul</span>, para divulgar seu <span>retorno à música</span>. Em <span>1 de janeiro de 2017</span>, o artista terminou seu hiato ao anunciar que <span>"música nova"</span> seria lançada cinco dias depois. No <span>dia 12 do mesmo mês</span>, Sheeran revelou <span>a capa</span>, <span>a lista de faixas</span> e <span>a data de lançamento de ÷</span>.</p>
+			</article>
+		</section>
+	</main>
+
+	<footer id="rodape">
+		<p id="socialMedias">
+			<a id="facebookIcon" href="https://www.facebook.com/EdSheeranMusic/" target="_blank" target="_blank" class="fab fa-facebook-f fa-lg"></a>
+			<a id="instagramIcon" href="https://www.instagram.com/teddysphotos/" target="_blank" class="fab fa-instagram fa-lg"></a>
+			<a id="twitterIcon" href="https://twitter.com/edsheeran/" target="_blank" class="fab fa-twitter fa-lg"></a>
+			<a id="youtubeIcon" href="https://www.youtube.com/user/EdSheeran?hl=en-GB&gl=GB" target="_blank" class="fab fa-youtube fa-lg"></a>
+			<a id="spotifyIcon" href="https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V" target="_blank" class="fab fa-spotify fa-lg"></a>
+		</p>
+		<p id="legalInformation">
+			&copy; Asylum Records UK / Atlantic Records<br>
+			<a href="http://www.wminewmedia.com/t&c/" target="iframeBox" onclick="openIFrame()">Termos e Condições</a> | <a href="http://www.wminewmedia.com/privacy/" target="iframeBox" onclick="openIFrame()">Política de Privacidade</a><br><br>			
+		</p>
+		<p id="sobreOSite">
+			<a href="sobreosite.html" target="iframeBox" onclick="openIFrame()">Sobre o site</a>
+		</p>
+	</footer>
+
+	<!-- iFrame utilizado pelos botões do rodapé -->
+	<div id="iFrameContainer" class="displayFlex displayNone">
+		<iframe id="iframeBox" name="iframeBox"></iframe>
+		<p id="btnFechar" class="fas fa-times-circle"></p>
+	</div>
+
+	<!-- Botão para retorno ao menu da página -->
+	<a id="toTopMenu" class="fas fa-bars displayNone" href="#"></a>
+
+	<script type="text/javascript" src="javascript/player.js"></script>
+	<script type="text/javascript" src="javascript/mapsCoords.js"></script>
+	<script type="text/javascript" src="javascript/listaMusicas.js"></script>
+	<script type="text/javascript" src="javascript/plusLyrics.js"></script>
+	<script type="text/javascript" src="javascript/multiplyLyrics.js"></script>
+	<script type="text/javascript" src="javascript/divideLyrics.js"></script>
+	<script type="text/javascript" src="javascript/scriptsAlbum.js"></script>
+	<script type="text/javascript" src="javascript/scriptsMain.js"></script>
+</body>
+</html>

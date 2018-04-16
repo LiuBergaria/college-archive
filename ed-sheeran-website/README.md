@@ -1,0 +1,1 @@
+Website expositivo sobre o cantor Ed Sheeran desenvolvido com a finalidade de completar o estudo da matéria de HTML5 e CSS3, utilizando técnicas aprendidas em aula e fora dela, recorrendo a sites e forúms de web design, além de outras fontes. Por Helil B. Bergária e Pedro L. Reis, com o auxílio e acompanhamento do Prof. Daniel F. Pires.

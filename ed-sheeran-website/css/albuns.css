@@ -1,0 +1,187 @@
+/* Início da página */
+#principal {	
+	padding: 2% 0 0;
+}
+
+/* Menu de troca de álbum */
+#menuAlbuns {
+	width: 100%;
+	padding: 0 20%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	/* Efeito de aparecimento*/
+	opacity: 0; /* Estado inicial para efeito */
+	animation: translateShowing .5s 2s ease-out forwards;
+}
+
+.btnAlbuns {
+	width: 6%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	cursor: pointer;
+}
+
+.btnAlbuns:before {
+	display: block;
+	content: '';
+	padding-top: 99%;
+}
+
+.btnAlbunsPlus{
+	background-image: url(../imgs/menu-plus.png);
+	order: -1;
+}
+
+.btnAlbunsMultiply{
+	background-image: url(../imgs/menu-multiply.png);
+	order: 1;
+}
+
+.btnAlbunsDivide{
+	background-image: url(../imgs/menu-divide.png);
+	order: 0;
+}
+
+input:checked + .btnAlbuns  {
+	width: 18%;
+	transition: width .4s;
+	cursor: default;
+}
+
+#menuAlbuns input {
+	display: none;
+}
+
+
+/* Título de álbum/música */
+#tituloPlayer {	
+	width: 100%;
+	padding: 1% 0;
+	text-align: center;
+	text-transform: capitalize;	
+	font-size: 2.5em;	
+	text-shadow: 2px 2px 4px #02cdff;
+
+	/* Efeito de aparecimento com translação */
+	opacity: 0; /* Estado inicial para animação */
+	animation: translateShowing .5s 2.25s ease-out forwards;
+}
+
+/* Área das legendas das músicas */
+#lyricsContainer {
+	width: 100%;
+	margin: 0 18%;
+	height: 80px;
+	margin-bottom: 1.5%;
+	padding: 0 8%;
+	text-align: center;	
+	font-size: 1.3em;
+	background-color: rgba(0,0,0,0.75);
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Área do player */
+#playerContainer {
+	width: 100%;
+	padding: 0 18% 4%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+
+	/* Efeito de aparecimento com translação */
+	opacity: 0; /* Estado inicial para animação */
+	animation: translateShowing .5s 2.5s ease-out forwards;
+}
+
+/* Área de funções e imagem do player */
+#player {
+	width: 35%;
+}
+
+#imagemPlayer {
+	position: relative;
+	background-image: url(../imgs/divide/divide.jpg);
+	width: 100%;
+	margin: auto;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#imagemPlayer:before {
+	display: block;
+	content: '';
+	padding-top: 100%;
+}
+
+#comandosPlayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+/* Formatação para todos botões da página*/
+button {
+	width: 100%;
+	margin: 0;
+	padding: 5% 0;
+	background-color: rgba(0,0,0,.9);	
+	color: white;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	outline: none;
+}
+
+/* Área de seleção de música via texto */
+#listaMusicasTexto {
+	width: 60%;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	padding: 1.5%;
+	background-color: rgba(0,0,0,.75);
+	
+}
+
+.listaMusicas {
+	width: 50%;
+	margin-bottom: 1.5%;
+}
+
+.tituloMusica {
+	text-transform: capitalize;
+	cursor: pointer;
+	line-height: 1.5em;
+	display: initial;
+}
+
+/* Área de seleção de música via imagem */
+#listaMusicasImagem {
+	width: 60%;
+}
+
+#imagemMusicas {
+	width: 75%;
+	height: 100%;
+	margin: auto;
+}
+
+/* Área de História */
+#plusHistory span {
+	color: #ea6b41;
+}
+
+#multiplyHistory span {
+	color: #4ad979;
+}
+
+#divideHistory span {
+	color: #02cdff;
+}

@@ -1,0 +1,57 @@
+var listaMusicas = {
+divide: [
+	"eraser",
+	"castle on the hill",
+	"dive",
+	"shape of you",
+	"perfect",
+	"galway girl",
+	"happier",
+	"hearts dont break around here",
+	"new man",
+	"what do i know",
+	"how would you feel (paean)",
+	"supermarket flowers",
+	"barcelona",
+	"bibia be ye ye",
+	"nancy mulligan",
+	"save myself"
+],
+
+multiply: [
+	"one",
+	"im a mess",
+	"sing",
+	"dont",
+	"nina",
+	"photograph",
+	"bloodstream",
+	"tenerife sea",
+	"runaway",
+	"the man",
+	"thinking out loud",
+	"afire love",
+	"take it back",
+	"shirtsleeves",
+	"even my dad does sometimes",
+	"i see fire"
+],
+
+plus: [
+	"the a team",
+	"drunk",
+	"u.n.i.",
+	"grade 8",
+	"wake me up",
+	"small bump",
+	"this",
+	"the city",
+	"lego house",
+	"you need me, i dont need you",
+	"kiss me",
+	"give me love",
+	"autumn leaves",
+	"little bird",
+	"gold rush",
+	"sunburn"
+]};

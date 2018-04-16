@@ -1,0 +1,362 @@
+@font-face {
+	font-family: 'DK Crayon Crumble';
+	src: url("../fonts/DK Crayon Crumble.ttf");	
+}
+
+body {
+	font-family: 'DK Crayon Crumble', sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+	color: white;
+	letter-spacing: 0.2em;
+}
+
+/* Menu Principal */
+#menuPrincipal {
+	width: 100%;
+	height: 120px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+	color: #02cdff;
+
+	/* Efeito de aparecimento */
+	animation: simpleShowing .75s ease-in forwards;
+
+	/* Transição para quando ocorrer mudança de álbum */
+	transition: .4s;
+}
+
+#menuPrincipal h1 {
+	width: 25%;
+	font-weight: bold;
+	font-size: 3.5em;
+	margin-left: 3%;
+	letter-spacing: .15em;
+	white-space: nowrap;
+	cursor: pointer;
+	outline: none;
+
+	/* Efeito de "digitação" */
+	width: 0; /* Estado inicial para o efeito */
+	overflow: hidden; /* Esconde o texto de fora da caixa do efeito */
+	animation: typingShowing 1.25s .75s ease-in-out forwards;
+}
+
+#menuPrincipal ul {
+	width: 60%;
+	display: flex;	
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+
+	/* Efeito de aparecimento com translação */
+	opacity: 0; /* Estado inicial para o efeito */
+	animation: translateShowing .5s 1.75s ease-out forwards;
+}
+
+#menuPrincipal li {
+	transform: rotate(-15deg);
+	transition: transform .5s;
+}
+
+#menuPrincipal li a {
+	font-size: 1.2em;
+	letter-spacing: .11em;
+	cursor: pointer;
+	box-sizing: border-box;	
+	outline: none;
+	
+	/* Para o contorno branco */
+	padding: 15px 50px;
+	border-radius: 5px;
+}
+
+#menuPrincipal li a:hover {	
+	background-color: white;
+	transition: .25s;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.8);
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+#menuPrincipal li:hover {
+	transform: scale(1.25);
+}
+
+#menuPrincipal li:first-child a:hover {
+	animation: changeColor 1.5s infinite;
+}
+
+/* Parte Main */
+#principal {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* Rodapé da Página */
+#rodape {
+	width: 100%;
+	height: 120px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+	background-color: black;
+	padding: 3% 0;
+	border-top: 1px solid white;
+}
+
+#rodape p {
+	width: 100%;
+	font-size: 1.1em;
+}
+
+#socialMedias {
+	margin-bottom: 1%;
+}
+
+#socialMedias a {	
+	color: white;
+	padding: 1.2%;
+	text-decoration: none;
+	transition: color .2s;	
+}
+
+/* Efeito de Cores onOver das socialMedias */
+#facebookIcon:hover {color: #3b5998;}
+#instagramIcon:hover {color: #cd486b;}
+#twitterIcon:hover {color: #00aced;}
+#youtubeIcon:hover {color: #cc181e;}
+#spotifyIcon:hover {color: #1db954;}
+
+#legalInformation a {
+	font-size: 0.75em;
+	color: white;
+	text-decoration: none;
+}
+
+#sobreOSite {
+	font-size: 1.1em;
+}
+
+/* iFrame */
+#iFrameContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	align-items: center;
+	justify-content: center;
+	width: 100vw; /* 100% do width do view */
+	height: 100vh; /* 100% do height do view */
+	background-color: rgba(0,0,0,.5);
+	z-index: 99; /* Garante que vai sempre ficar sobre todos os outros itens */
+}
+
+#iFrameContainer iframe {
+	background: white;
+	width: 80%;
+	height: 80%;
+}
+
+#btnFechar, #closeImageOverPage {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5vw;
+	color: white;
+	font-size: 2em;
+	padding: 1%;
+	cursor: pointer;
+	text-align: center;
+	background-color: none;
+}
+
+/* Classes Globais */
+.parallaxImage {
+	width: 100%;
+	min-height: 600px;
+	padding: 4% 15%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+
+	/* Efeito de aparecimento com translação */
+	opacity: 0; /* Estado inicial para o efeito */
+	animation: translateShowing .5s 1.75s ease-out forwards;
+}
+
+.sectionText {
+	width: 100%;
+	padding: 4% 15%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+
+	/* Efeito de aparecimento com translação */
+	opacity: 0; /* Estado inicial para o efeito */
+	animation: translateShowing .5s 2s ease-out forwards;
+}
+
+.sectionText h2, .parallaxImage h2 {
+	width: 100%;
+	font-size: 3.5em;
+	letter-spacing: 0.25em;
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+.sectionText p, .parallaxImage p {
+	text-indent: 5%;
+	text-align: center;
+	line-height: 1.3em;
+	letter-spacing: 0.1em;
+	font-size: 1.05em;
+	margin: 1% 0;
+}
+
+.sectionText div article p {
+	color: black;
+}  
+
+.parallaxImage h3, .sectionText h3{
+	width: 100%;
+	text-align: right;
+	color: black;
+	letter-spacing: .1em;
+	margin-top: .5%;
+}
+
+.sectionText h3 {
+	color: white;
+}
+
+.parallaxImage h3 {
+	color: black;
+}
+
+.logo {
+	width: 100%;
+	font-weight: bold;
+	font-size: 6em;
+	letter-spacing: .2em;
+	text-align: center;
+	text-shadow: 2px 2px 10px black;
+}
+
+/* 'Botões' de links estilizados */
+.aButton, .aButtonInverso {
+	width: 100%;
+	background-color: rgba(0,0,0,.9);
+	color: white;
+	padding: 3%;
+	font-size: 1.2em;
+	font-weight: normal;
+	cursor: pointer;
+	text-align: center;
+}
+.aButton {
+	background-color: rgba(0,0,0,.9);
+	color: white;
+}
+
+.aButtonInverso {
+	background-color: white;
+	color: black;
+	font-size: 1.3em;
+}
+
+.aButton:hover, .aButtonInverso:hover {
+	/* Efeito */
+	animation: stretchEffect 1s ease-in-out infinite;
+}
+
+/* Botão para o topo */
+#toTopMenu {
+	color: white;
+	cursor: pointer;
+	border: 1px solid white;
+	border-radius: 50%;
+	padding: 1.5%;
+	text-align: center;
+	position: fixed;
+	top: 2%;
+	right: 2%;
+	transition: transform .2s ease-in-out;
+}
+
+/* Efeitos com classes - para JS */
+.fade-out {
+	transform: scale(0);
+}
+
+.plusCor {
+	color: #ea6b41;
+	font-weight: bold;
+}
+
+.multCor {
+	color: #4ad979;
+	font-weight: bold;
+}
+
+.divCor {
+	color: #02cdff;
+	font-weight: bold;
+}
+
+.displayFlex {
+	display: flex;
+	opacity: 1;
+}
+
+.displayNone {
+	display: none;
+}
+
+/* Efeitos */
+@keyframes simpleShowing {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@keyframes translateShowing {
+	from { opacity: 0; transform: translate(-50px, 0px); }
+	to { opacity: 1; transform: translate(0px, 0px);}
+}
+
+@keyframes typingShowing {
+  from { width: 0 }
+  75% { font-size: 5em}
+  to { width: 25% }
+}
+
+@keyframes changeColor {
+	0% {color: #4ad979}
+	50% {color: #ea6b41}
+	100% {color: #02cdff}
+}
+
+@keyframes stretchEffect {
+	50% { transform: scaleX(.75) }
+	100% { transform: scaleX(1) }
+}
+
+/* Usar a propriedade 'forwards' quando chamar um efeito
+permite com que a keyframe mude propriedades do elemento */

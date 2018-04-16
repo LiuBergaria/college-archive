@@ -1,0 +1,97 @@
+.sectionText p, .parallaxImage p {
+	text-align: initial;
+}
+
+.textContainer {
+	padding: 2% 2%;
+	background-color: rgba(0,0,0,.75);
+}
+
+.imgFloatLeftHor, .imgFloatLeftVert, .imgFloatRightHor, .imgFloatRightVert {
+	height: auto;
+	margin: .5% 2%;
+}
+
+.imgFloatLeftHor, .imgFloatRightHor {
+	width: 50%;
+}
+
+.imgFloatLeftVert, .imgFloatRightVert {
+	width: 25%;
+}
+
+.imgFloatLeftHor, .imgFloatLeftVert {
+	float: left;
+}
+
+.imgFloatRightHor, .imgFloatRightVert {
+	float: right;
+}
+
+h2 span {
+	font-size: 0.8em;
+}
+
+#historiaMusicasContainer {
+	width: 100%;
+	padding: 2% 2%;
+	background-color: rgba(0,0,0,.75);
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.historiaMusica {
+	width: 33%;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	padding: 2%;
+	box-sizing: border-box;
+	margin-bottom: 2%;
+}
+
+.historiaMusica:first-child {
+	border-left: none;
+}
+
+.historiaMusica:nth-child(3) {
+	border-right: none;
+}
+
+.historiaMusica:nth-child(1) p {	
+	text-align: right;
+}
+
+.historiaMusica:nth-child(2) p {	
+	text-align: center;
+}
+
+.historiaMusica:nth-child(3) p {	
+	text-align: left;
+}
+
+.historiaMusica .nomeMusica {
+	text-align: center;
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+.historiaMusica img {
+	max-width: 100%;	
+	height: auto;
+	margin: 2% 0;
+}
+
+#videoEntrevista {	
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 ratio */
+	width: 90%;
+}
+
+#videoEntrevista iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

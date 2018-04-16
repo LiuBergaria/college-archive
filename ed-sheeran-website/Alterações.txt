@@ -1,0 +1,4 @@
+Fix #1:
+Botão de subir ao topo da página desaparece quando outros elementos aparecem sobre a tela
+Fix #2:
+Correções necessárias devidas ao fix anterior; Alteração de estilo do botão de fechar elementos sobre a tela; Função para fechar elementos sobre a tela facilitada; Uso de classes para display none e flex ao invés de alterar diretamente no style do próprio elemento
